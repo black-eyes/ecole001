@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .flex-container {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            /* Adjust this value to fit your layout */
+        }
+
+        .centered-content {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+
+        .catbtn {
+            padding: 8px 50px;
+            background: black;
+            color: white;
+            border-radius: 50px;
+            width: 40px;
+            text-align: center;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="flex-container">
+        <div style="width: 45%; display: inline-block; text-align: center;">
+            <img style="width: 50%;" src="../pochette/pochette_0.jpg" />
+        </div>
+        <div class="centered-content">
+            <h2 style="text-align: center;">title of film</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed expedita, quibusdam error sapiente
+                dignissimos suscipit corrupti natus velit, saepe, nesciunt accusamus. Eos fuga labore ad assumenda
+                laudantium odit animi inventore?</p>
+
+
+                <div>
+                    <span class="catbtn">Action</span> 
+                    <span class="catbtn">Horror</span> 
+                    <span class="catbtn">Fantasy</span>
+                </div>
+
+            
+        </div>
+    </span>
+
+
+    <!--
+    <h1>Movie Details</h1>
+    <p>Movie ID: {{MOVIE_ID}}</p>
+
+    -->
+</body>
+
+</html>

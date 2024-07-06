@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+body {
+
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+}
+
+.btn.left {
+    left: 0;
+}
+
+.btn.right {
+    right: 0;
+}
+
+
+
+.film-item {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 20%;
+    display: inline-block;
+    padding: 1em;
+       
+}
+
+.film-item img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    
+}
+
+.film-info {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.film-info h4 {
+    margin: 0;
+}
+
+.film-info p {
+    margin: 0;
+    color: #666;
+}
+
+
+.film-list
+{
+    text-align: center;
+}
+
+
+.film-info>h4,.section-title,.filmeCatLink
+{
+    font-family: sans-serif !important;  
+    
+}
+
+
+.film-info>h4{
+    font-size: larger;
+
+}
+
+
+.section-title
+{
+    text-align: center;
+    margin: 3em 0 3em 0;
+}
+
+.filmeTitleandLink,.filmeCatLink
+{
+    color: inherit;
+    text-decoration: none;
+    font: inherit;
+
+}
+
+    </style>
+</head>
+<body>
+
+<div class="slider">
+        <button class="btn left" onclick="prevSlide()">&#10094;</button>
+        <img id="slider-image" src="slider/s1.jpg" alt="Slider Image">
+        <button class="btn right" onclick="nextSlide()">&#10095;</button>
+</div>
+
+
+<div style="display: block">
+    <h2 class="section-title">New Films</h2>
+    <div class="film-list">
+        <div class="film-item">
+            <img src="pochette/pochette_0.jpg" alt="Film 1">
+            <div class="film-info">
+                <h4>
+                    <b>
+                        <a class="filmeTitleandLink" href="/movie/1">Film First</a>
+                    </b>
+                </h4>
+                <p class="filmeCatLink" >
+                    <a href="#" class="filmeCatLink" >
+                        Action
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="film-item">
+            <img src="pochette/pochette_1.jpg" alt="Film 2">
+            <div class="film-info">
+                <h4>
+                    <b>
+                        <a class="filmeTitleandLink" href="/movie/2">Film Second</a>
+                    </b>
+                </h4>
+                <p class="filmeCatLink" > 
+                <a href="#" class="filmeCatLink" >Adventure</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="film-item">
+            <img src="pochette/pochette_2.jpg" alt="Film 3">
+            <div class="film-info">
+                <h4>
+                    <b>
+                        <a class="filmeTitleandLink" href="/movie/3">Film Third</a>
+                    </b>
+
+                </h4>
+                <p class="filmeCatLink" > 
+                    <a href="#" class="filmeCatLink" > Sci-Fi </a>
+                </p>
+            </div>
+        </div>
+
+
+    <div class="film-item">
+            <img src="pochette/pochette_3.jpg" alt="Film 3">
+            <div class="film-info">
+                <h4>
+                    <b>
+                        <a class="filmeTitleandLink" href="/movie/4">
+                            Film Third
+                        </a>
+                    </b>
+                </h4>
+                <p class="filmeCatLink" >
+                    <a href="#" class="filmeCatLink" >Sci-Fi </a>
+                </p>
+            </div>
+    </div>
+
+
+        <!-- Add more film items as needed -->
+    </div>
+</div>
+
+
+
+
+
+<script>
+
+let currentIndex = 0;
+const images = ['slider/s1.jpg', 'slider/s2.jpg', 'slider/s3.jpg'];
+
+function showSlide(index) {
+    const imgElement = document.getElementById('slider-image');
+    imgElement.src = images[index];
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showSlide(currentIndex);
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showSlide(currentIndex);
+}
+
+
+</script>
+</body>
+</html>
